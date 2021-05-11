@@ -5,29 +5,29 @@
 using namespace std;
 #define MAYOR(a, b, c) ( a > b && a > c ? a : b > c ? b : c > a ? c : b)
 #define MENOR(a, b, c) ( a < b && a < c ? a : b < c ? b : c < a ? c : b)
+#define PROMEDIO(a, b ,c)((a + b + c) / 3)
 int main()
 {   
     
-    int n, nx, nxx, mayor, menor = 0;
+    int n, nx, nxx = 0;
     int i = 1;
     do
     {
         
         if (!i)break;
         {
-            cout << "Inicio" << endl;
-            cout << "Ingrese numero 1: ";
+            
+            cout << "Inicio \nIngrese numero 1: ";
             cin >> n;
             cout << "Ingrese numero 2: ";
             cin >> nx;
             cout << "Ingrese numero 3: ";
-            cin >> nxx;
-            mayor = MAYOR(n, nx, nxx);
-            menor = MENOR(n, nx, nxx);
-            cout << "El mayor es: " << mayor << endl;
-            cout << "El menor es: " << menor << endl;
-            cout << "Desea salir? 0 = FIN,  != 0 CONTINUAR: ";
-            cin >> i;
+            cin >> nxx;          
+            cout << "El mayor es: " << MAYOR(n, nx, nxx) << endl;
+            cout << "El menor es: " << MENOR(n, nx, nxx) << endl;
+            cout << "El promedio es: " << PROMEDIO(n, nx, nxx) << endl;
+            cout << "Desea salir? 0 = FIN,  != 0 CONTINUAR: "; cin >> i;
+           
         }
         
     } while (true);
